@@ -1,0 +1,66 @@
+---
+title: "IS2000 Retr XML"
+output:
+  pdf_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
+---
+
+```{r}
+install.packages("XML")
+library("XML")
+library("methods")
+```
+## Question 3
+```{r}
+xmlObj <- xmlParse("is2000.Books5.xml")
+
+xmlObjTree <- xmlTreeParse("is2000.Books5.xml")
+xmlObj
+
+```
+
+## Question 4
+```{r}
+xpathEx <- "//catalog/book[title='Paradox Lost']/author"
+author <- xpathSApply(xmlObj, xpathEx, xmlValue)
+
+head(author)
+```
+## Question 5
+```{r}
+xpathEx <- "//catalog/book[edition>=2]/title"
+titles <- xpathSApply(xmlObj, xpathEx, xmlValue)
+
+titles
+```
+## Question 6
+```{r}
+xpathEx <- "min(/catalog/book/price)"
+lowestPrice <- xpathSApply(xmlObj, xpathEx, xmlValue)
+xpathEx2 <- "/catalog/book[price=4.95]/title"
+
+lowestPriceTitle <- xpathSApply(xmlObj, xpathEx2, xmlValue)
+lowestPriceTitle
+
+```
+## Question 7
+```{r}
+xpathEx <- "/catalog/book[genre='Fantasy' or genre='Romance']/title"
+FantacyRomanceTitle <- xpathSApply(xmlObj, xpathEx, xmlValue)
+
+xpathEx2 <- "/catalog/book[genre='Fantasy' or genre='Romance']/price"
+FantacyRomancePrice <- xpathSApply(xmlObj, xpathEx2, xmlValue)
+
+FantacyRomanceTitle
+FantacyRomancePrice
+```
+## Question 8
+```{r}
+xpathEx <- "count(/catalog/book[price >= 20])"
+booksGreaterThan20 <- xpathSApply(xmlObj, xpathEx, xmlValue)
+booksGreaterThan20
+```
+
+

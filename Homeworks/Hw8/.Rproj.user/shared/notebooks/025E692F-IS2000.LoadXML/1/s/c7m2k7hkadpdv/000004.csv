@@ -1,0 +1,2 @@
+"0","library(sqldf)"
+"0","sqldf(""SELECT name FROM xmldfData WHERE price < 50"")"

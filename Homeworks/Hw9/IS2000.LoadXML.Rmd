@@ -1,0 +1,26 @@
+---
+title: "IS2000 Load XML"
+author: "Shubh Patni"
+date: "Fall 2022"
+---
+
+
+```{r}
+doc<-xmlParse("IS2000.Stocks.RevB.xml")
+xmldfData <- xmlToDataFrame(nodes = getNodeSet(doc, "//stock"))
+
+```
+
+```{r}
+library(sqldf)
+sqldf("SELECT name FROM xmldfData WHERE price < 50")
+```
+
+```{r}
+mean(as.numeric(xmldfData$price), trim=0.1)
+```
+
+```{r}
+xmldfData$price[which(xmldfData$symbol == "ZAGM")]
+```
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE root [
+<!ELEMENT root (Address)>
+<!ELEMENT Address (addrID,street,postalCode,SecurityDevice*)>
+<!ELEMENT addrID (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT postalCode (#PCDATA)>
+
+<!ELEMENT SecurityDevice (devID,type,location, Alarm?)>
+<!ELEMENT devID (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+
+<!ELEMENT Alarm (alarmID,time,date,devID)>
+<!ELEMENT alarmID (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+]>
+
+<root>
+    <Address>
+        <addrID>1</addrID>
+        <street>Mass Ave</street>
+        <postalCode>02115</postalCode>
+        <SecurityDevice>
+            <devID>1</devID>
+            <type>Door</type>
+            <location>Front</location>
+            <Alarm>
+                <alarmID>1</alarmID>
+                <time>12:00</time>
+                <date>12/12/12</date>
+                <devID>1</devID>
+            </Alarm>
+        </SecurityDevice>
+        <SecurityDevice>
+            <devID>2</devID>
+            <type>Window</type>
+            <location>Back</location>
+        </SecurityDevice>
+    </Address>
+</root>

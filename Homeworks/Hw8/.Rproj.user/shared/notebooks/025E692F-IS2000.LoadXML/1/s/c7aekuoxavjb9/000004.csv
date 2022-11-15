@@ -1,0 +1,3 @@
+"0","doc<-xmlParse(""IS2000.Stocks.RevB.xml"")"
+"0","xmldfData <- xmlToDataFrame(nodes = getNodeSet(doc, ""//stock""))"
+"0","View(xmldfData)"

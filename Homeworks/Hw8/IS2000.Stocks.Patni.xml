@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE portfolio [
+  <!ELEMENT portfolio (stock*)>
+  <!ATTLIST portfolio xmlns:dt CDATA xml:space CDATA #REQUIRED>
+  <!ELEMENT stock (name, symbol, price)>
+  <!ATTLIST stock exchange CDATA #REQUIRED>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT symbol (#PCDATA)>
+  <!ELEMENT price (#PCDATA)>
+  <!ATTLIST price dt:dt CDATA #REQUIRED>
+]>
+
+<portfolio xmlns:dt="urn:schemas-microsoft-com:datatypes" xml:space="preserve">
+  <stock exchange="nyse">
+    <name>zacx corp</name>
+    <symbol>ZCXM</symbol>
+    <price dt:dt="number">28.875</price>
+  </stock>
+  <stock exchange="nyse">
+    <name>zappyx</name>
+    <symbol>ZPPX</symbol>
+    <price dt:dt="number">0.994</price>
+  </stock>
+  <stock exchange="nasdaq">
+    <name>zaffymat inc</name>
+    <symbol>ZFFX</symbol>
+    <price dt:dt="number">92.250</price>
+  </stock>
+  <stock exchange="nasdaq">
+    <name>zysmergy inc</name>
+    <symbol>ZYSZ</symbol>
+    <price dt:dt="number">20.313</price>
+  </stock>
+  <stock exchange="sse">
+    <name>zagmatz ag</name>
+    <symbol>ZAGM</symbol>
+    <price dt:dt="number">11.842</price>
+  </stock>
+  <stock exchange="nyse">
+    <name>zurlix</name>
+    <symbol>ZULX</symbol>
+    <price dt:dt="number">118.993</price>
+  </stock>
+</portfolio>

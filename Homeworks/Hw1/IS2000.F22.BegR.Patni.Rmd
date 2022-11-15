@@ -1,0 +1,46 @@
+---
+title: "IS2000 Patni"
+date: "Fall 2022"
+output: html_notebook
+---
+
+## Question 1
+```{r Q1_LoadCSV}
+df.airlines <- read.csv("FlightsWithAirlines.csv",stringsAsFactors = FALSE)
+```
+## Question 2
+```{r Q2_strFunction}
+print(str(df.airlines))
+```
+
+## Question 3
+```{r Q3_HeadFunction}
+print(head(df.airlines, 4))
+```
+## Question 4
+```{r Q4_Tail}
+print(tail(df.airlines,3))
+```
+
+
+## Question5
+```{r Q5_Display_Certain_Values}
+print(df.airlines[,c("carrier","flight","origin","dest")])
+```
+## Question6
+```{r Q6_Get_Trimmed_Mean}
+print(mean(df.airlines[,"dep_delay"],0.1))
+```
+## Question7
+```{r Q7_add_New_Column}
+tod <- c()
+for (i in 1:nrow(df.airlines["dep_hr"])){
+  ifelse(df.airlines[i,"dep_hr"] < 12,tod <- append(tod,"am"),tod <- append(tod,"pm"))
+}
+df.airlines["tod"] <- tod
+print(df.airlines)
+```
+
+
+
+

@@ -1,0 +1,8 @@
+"0","xpathEx <- ""//catalog/book[title='Paradox Lost']/author"""
+"0","author <- xpathSApply(xmlObj, xpathEx, xmlValue)"
+"0",""
+"0","head(author)"
+"1","[1]"
+"1"," ""Kress, Peter"""
+"1","
+"

@@ -1,0 +1,11 @@
+---
+title: "IS2000 Parse XML with DTD"
+author: "Shubh Patni"
+date: "11/7/2022"
+---
+
+```{r}
+library(XML)
+xml <- xmlParse("IS2000.Stocks.Patni.xml")
+```
+

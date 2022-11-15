@@ -1,0 +1,74 @@
+---
+title: "IS2000 Working with Data Frame"
+output: html_notebook
+author: "Patni"
+date: "Fall 2022"
+---
+
+## Question 1
+```{r Q1_LoadCSV}
+df.wines = read.csv("whitewines.csv", stringsAsFactors = FALSE)
+```
+
+## Question 2
+```{r Q2_Inspect}
+head(df.wines)
+```
+
+## Question 3
+```{r Q3_FixedAciditiy>7.5}
+length(which(df.wines$fixed.acidity > 7.5))
+```
+
+## Question 4
+```{r Q4_MoreConditions}
+length(which((df.wines$alcohol >= 9.5 & df.wines$alcohol <= 11.5) & (df.wines$quality > 7)))
+```
+
+
+## Question 5
+```{r Q5_Alcohol>14}
+length(which(df.wines$alcohol >14))
+```
+
+
+## Question 6
+```{r Q6_MedianOfQuality<6}
+median(which(df.wines$quality < 6))
+```
+
+
+## Question 6
+```{r Q6_MedianOfQuality<6}
+median(which(df.wines$quality < 6))
+```
+
+
+## Question 7
+```{r Q7_Swill_index}
+swillIndex <- c()
+
+for (i in 1:nrow(df.wines)){
+  value <- (df.wines$alcohol[i]/df.wines$quality[i])*df.wines$fixed.acidity[i]
+  swillIndex <- append(swillIndex,value)
+}
+df.wines["swill_index"] <- swillIndex
+```
+
+```{r}
+print(df.wines["swill_index"])
+```
+## Question 8
+```{r Q8_Swill_index}
+mean_alc = mean(df.wines$alcohol)
+sd_alc = sd(df.wines$alcohol)
+
+alcohol.z <- c()
+
+for (i in 1:nrow(df.wines)){
+  value <- (mean_alc - df.wines$alcohol[i])/sd_alc
+  alcohol.z <- append(alcohol.z,value)
+}
+df.wines["alcohol.z"] <- alcohol.z
+print(df.wines["alcohol.z"])
+```

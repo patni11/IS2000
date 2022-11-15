@@ -1,0 +1,19 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r Q1_LoadCSV}
+murder <- read.csv("murder.csv",stringsAsFactors=FALSE);
+head(murder)
+```
+
+
+```{r Q13-manu}
+library(sqldf)
+cereals <- df.cereal
+df.manu <- sqldf("select cereals.Manufacturer, count(cereals.Manufacturer) from cereals group by cereals.Manufacturer")
+df.manu
+```
+
+

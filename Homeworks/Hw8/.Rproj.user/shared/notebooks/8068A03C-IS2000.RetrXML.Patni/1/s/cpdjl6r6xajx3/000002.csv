@@ -1,0 +1,7 @@
+"0","xpathEx <- ""count(/catalog/book[price >= 20])"""
+"0","booksGreaterThan20 <- xpathSApply(xmlObj, xpathEx, xmlValue)"
+"0","booksGreaterThan20"
+"1","[1]"
+"1"," 5"
+"1","
+"

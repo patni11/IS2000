@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<portfolio>
+  <stock exchange="nyse">
+    <name>zacx corp</name>
+    <symbol>ZCXM</symbol>
+    <price>28.875</price>
+  </stock>
+  <stock exchange="nyse">
+    <name>zappyx</name>
+    <symbol>ZPPX</symbol>
+    <price>0.994</price>
+  </stock>
+  <stock exchange="nasdaq">
+    <name>zaffymat inc</name>
+    <symbol>ZFFX</symbol>
+    <price>92.250</price>
+  </stock>
+  <stock exchange="nasdaq">
+    <name>zysmergy inc</name>
+    <symbol>ZYSZ</symbol>
+    <price>20.313</price>
+  </stock>
+  <stock exchange="sse">
+    <name>zagmatz ag</name>
+    <symbol>ZAGM</symbol>
+    <price>11.842</price>
+  </stock>
+  <stock exchange="nyse">
+    <name>zurlix</name>
+    <symbol>ZULX</symbol>
+    <price>118.993</price>
+  </stock>
+</portfolio>

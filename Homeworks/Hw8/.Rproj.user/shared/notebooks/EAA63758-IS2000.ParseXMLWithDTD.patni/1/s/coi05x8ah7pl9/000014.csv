@@ -1,0 +1,23 @@
+"0","library(XML)"
+"0","xml <- xmlParse(""IS2000.Stocks.Patni.xml"")"
+"1","AttValue: "" or ' expected
+"
+"1","Attribute default value declaration error
+"
+"1","Space required after the attribute default value
+"
+"1","internal error: xmlParseInternalSubset: error detected in Markup declaration
+
+"
+"1","DOCTYPE improperly terminated
+"
+"1","Start tag expected, '<' not found
+"
+"2","Error: 1: AttValue: "" or ' expected
+2: Attribute default value declaration error
+3: Space required after the attribute default value
+4: internal error: xmlParseInternalSubset: error detected in Markup declaration
+
+5: DOCTYPE improperly terminated
+6: Start tag expected, '<' not found
+"
